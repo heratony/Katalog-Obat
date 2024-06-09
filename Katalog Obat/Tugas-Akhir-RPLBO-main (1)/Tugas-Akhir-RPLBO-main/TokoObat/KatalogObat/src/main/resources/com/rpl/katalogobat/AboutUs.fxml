@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rpl.katalogobat.UserviewController">
+   <children>
+      <Label layoutX="202.0" layoutY="26.0" text="ABOUT US">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="162.0" layoutY="123.0" prefHeight="126.0" prefWidth="306.0" text="&#10;Anggota Kelompok : &#10;1. Aodellas Magosing (71220897)&#10;2. Via Angelyca Patricia (71220871)&#10;3. Hera Chantica Dewi Tony Putri (71220929)&#10;4. Debora Lintang Kusumaningrum (71220952)&#10;" />
+      <Label layoutX="125.0" layoutY="322.0" text="SISTEM KATALOG OBAT ">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

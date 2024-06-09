@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-shared-configuration>
+    <!--
+This file contains additional configuration written by modules in the NetBeans IDE.
+The configuration is intended to be shared among all the users of project and
+therefore it is assumed to be part of version control checkout.
+Without this configuration present, some functionality in the IDE may be limited or fail altogether.
+-->
+    <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+        <word>btnbersihkan</word>
+        <word>btncari</word>
+        <word>btndelete</word>
+        <word>btndetail</word>
+        <word>btnimport</word>
+        <word>btnmasuk</word>
+        <word>btnnew</word>
+        <word>btnsave</word>
+        <word>btnupdate</word>
+        <word>cari</word>
+        <word>checkremember</word>
+        <word>fieldbentuk</word>
+        <word>fielddosis</word>
+        <word>fieldexp</word>
+        <word>fieldgambar</word>
+        <word>fieldmerek</word>
+        <word>fieldnamaobat</word>
+        <word>fieldnewpassword</word>
+        <word>fieldpassword</word>
+        <word>fieldusername</word>
+        <word>labelnama</word>
+        <word>linklupa</word>
+        <word>linksignup</word>
+        <word>passwordulang</word>
+        <word>txtlabel</word>
+    </spellchecker-wordlist>
+</project-shared-configuration>

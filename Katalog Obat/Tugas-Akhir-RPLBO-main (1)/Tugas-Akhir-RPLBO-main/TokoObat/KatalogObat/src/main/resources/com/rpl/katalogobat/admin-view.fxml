@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="744.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rpl.katalogobat.AdminviewController">
+   <children>
+      <GridPane layoutY="54.0" prefHeight="179.0" prefWidth="102.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nama Obat : " GridPane.halignment="RIGHT" />
+            <Label text="Komposisi : " GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Label text="Merek :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label text="EXP :" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Label text="Bentuk Obat : " GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Label text="Foto : " GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="124.0" layoutY="54.0" prefHeight="152.0" prefWidth="695.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="fieldnamaobat" />
+            <TextField fx:id="fieldkomposisi" GridPane.rowIndex="1" />
+            <TextField fx:id="fieldmerek" GridPane.rowIndex="2" />
+            <DatePicker fx:id="fieldexp" GridPane.rowIndex="3" />
+            <MenuButton fx:id="fieldbentuk" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Pilih" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Tablet" />
+                <MenuItem mnemonicParsing="false" text="Kapsul" />
+                <MenuItem mnemonicParsing="false" text="Kaplet" />
+                <MenuItem mnemonicParsing="false" text="Pil" />
+                <MenuItem mnemonicParsing="false" text="Puyer" />
+                <MenuItem mnemonicParsing="false" text="Sirup" />
+              </items>
+            </MenuButton>
+            <TextField fx:id="fieldnamaobat" layoutX="10.0" layoutY="43.0" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnsave" layoutX="641.0" layoutY="406.0" mnemonicParsing="false" onAction="#Btnsave" text="save" />
+      <Button fx:id="btnupdate" layoutX="702.0" layoutY="406.0" mnemonicParsing="false" onAction="#btnupdate" text="update" />
+      <Button fx:id="btndelete" layoutX="769.0" layoutY="406.0" mnemonicParsing="false" onAction="#btndelete" style="-fx-background-color: red;" text="delete" />
+      <TextField fx:id="cari" layoutX="197.0" layoutY="448.0" prefHeight="26.0" prefWidth="454.0" />
+      <TableView layoutX="26.0" layoutY="485.0" prefHeight="200.0" prefWidth="806.0">
+        <columns>
+          <TableColumn prefWidth="37.60003662109375" text="ID" />
+          <TableColumn prefWidth="213.59999084472656" text="Nama Obat" />
+            <TableColumn minWidth="0.0" prefWidth="160.0" text="Merek" />
+            <TableColumn minWidth="0.0" prefWidth="87.99996948242188" text="Komposisi" />
+            <TableColumn prefWidth="100.0" text="Bentuk" />
+            <TableColumn prefWidth="92.00006103515625" text="EXP" />
+            <TableColumn prefWidth="115.99993896484375" text="Gambar" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="126.0" layoutY="213.0" prefHeight="118.0" prefWidth="128.0" style="-fx-background-color: #C0C0C0; -fx-background-radius: 5;">
+         <children>
+            <ImageView fx:id="fieldgambar" fitHeight="118.0" fitWidth="158.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnimport" layoutX="140.0" layoutY="349.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Import Image" />
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="850.0">
+        <menus>
+          <Menu fx:id="logout" mnemonicParsing="false" text="Logout">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" onAction="#handleClose"/>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btnbersihkan" layoutX="650.0" layoutY="448.0" mnemonicParsing="false" onAction="#btnbersihkan" text="bersihkan" />
+   </children>
+</AnchorPane>

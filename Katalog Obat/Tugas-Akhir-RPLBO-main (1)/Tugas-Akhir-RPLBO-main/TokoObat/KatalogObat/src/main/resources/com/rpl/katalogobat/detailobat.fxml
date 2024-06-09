@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rpl.katalogobat.DetailobatController">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Kembali">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleBack" text="Close" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fx:id="fieldgambar" fitHeight="172.0" fitWidth="233.0" layoutX="46.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/amocillin%20kapsul.jpeg" />
+         </image>
+      </ImageView>
+      <Text layoutX="83.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detail Obat">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <TextField fx:id="fieldnamaobat" layoutX="70.0" layoutY="285.0" prefHeight="26.0" prefWidth="186.0" promptText="Nama Obat" />
+      <GridPane layoutX="300.0" layoutY="127.0" prefWidth="287.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.4" minWidth="10.0" prefWidth="76.8" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.4" minWidth="10.0" prefWidth="211.2" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Komposisi" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Merek" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="EXP" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bentuk" GridPane.rowIndex="3" />
+            <TextField fx:id="fieldkomposisi" promptText="Komposisi" GridPane.columnIndex="1" />
+            <TextField fx:id="fieldmerek" promptText="Merek" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="fieldexp" promptText="EXP" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="fieldbentuk" promptText="Bentuk" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
